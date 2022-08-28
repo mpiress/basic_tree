@@ -14,11 +14,11 @@
 <p> </p>
 
 <p align="justify">
-	Em uma árvore binária, cada elemento é denominado nó da árvore e sua posição na estrutura pode levar a uma de três nomenclaturas. Se o nó é o primeiro inserido, denominamos tal elemento como <b>raiz</b> da árvore. Partindo da *raiz*, temos por designação dois filhos, *filho esquerdo* e *filho direto*. Um filho é posicionado a esquerda, se somente se, seu valor de teste é menor que o valor do nó onde este será conectado. Este nó de conexão é conhecido como *nó pai*. Por conseguinte, os filhos tidos como direitos seguem a mesma regra, contudo, para valores maiores.
+	Em uma árvore binária, cada elemento é denominado nó da árvore e sua posição na estrutura pode levar a uma de três nomenclaturas. Se o nó é o primeiro inserido, denominamos tal elemento como <b>raiz</b> da árvore. Partindo da <b>raiz</b>, temos por designação dois filhos, <b>filho esquerdo</b> e <b>filho direto</b>. Um filho é posicionado a esquerda, se somente se, seu valor de teste é menor que o valor do nó onde este será conectado. Este nó de conexão é conhecido como <b>nó pai</b>. Por conseguinte, os filhos tidos como direitos seguem a mesma regra, contudo, para valores maiores.
 </p>
 
 <p align="justify">
-	Quando um nó não possui filhos, ou seja, seus ponteiros de filho esquerdo e direito estão livres ou com valores como *NULL*, chamados esse nó de folha e consideramos que este tipo de nó delimita o "fundo" da estrutura. A Fig. 1 detalha em alto nível esse modelo de estrutura de dados em detalhes.
+	Quando um nó não possui filhos, ou seja, seus ponteiros de filho esquerdo e direito estão livres ou com valores como <b>NULL</b>, chamados esse nó de folha e consideramos que este tipo de nó delimita o "fundo" da estrutura. A Fig. 1 detalha em alto nível esse modelo de estrutura de dados em detalhes.
 </p>
 
 <p align="center">
@@ -26,15 +26,15 @@
 </p>
 
 <p align="justify">
-A partir da Fig. 1 é possível observar algumas características importantes da estrutra em árvore. Primeiro, a estrutura detalha sua altura computando os *níveis* de hierarquia. No exemplo, é possível observar que, partindo do nó *raiz* (i.e., 5), temos como altura da árvore 3, considerando que a *raiz* se encontra em nível zero. Assim, identificar a altura de uma estrutura em árvore é equivalente a econtrar, partindo-se da *raiz*, o nó *folha* mais profundo existente. 
+A partir da Fig. 1 é possível observar algumas características importantes da estrutra em árvore. Primeiro, a estrutura detalha sua altura computando os <b>níveis</b> de hierarquia. No exemplo, é possível observar que, partindo do nó <b>raiz</b> (i.e., 5), temos como altura da árvore 3, considerando que a <b>raiz</b> se encontra em nível zero. Assim, identificar a altura de uma estrutura em árvore é equivalente a econtrar, partindo-se da <b>raiz</b>, o nó <b>folha</b> mais profundo existente. 
 </p>
 
 <p align="justify">
-Observe na Fig. 1, que todo nó da estrutura apresenta no máximo dois filhos. Isso caracteriza a estrutura como binária, cujos nós são, no máximo, de grau 2. Consideramos como *grau* a quantidade de ponteiros conectados em um determinado nó. 
+Observe na Fig. 1, que todo nó da estrutura apresenta no máximo dois filhos. Isso caracteriza a estrutura como binária, cujos nós são, no máximo, de <b>grau 2</b>. Consideramos como <b>grau</b> a quantidade de ponteiros conectados em um determinado nó. 
 </p>
 
 <p align="justify">
-Por fim, ainda utilizando da representação da Fig. 1, podemos observar que é possível identificar a altura da estrutura. Em literatura, uma árvore binária *balanceada* apresenta como altura o fator de *log*n, com n representando o número de elementos inseridos. Esse *balanceamento* é obtido mantendo-se todas as *folhas* em níveis muito próximos, sendo aceitável uma variação de no máximo 1 de altura para variações. Consideramos esse contexto como caso médio, isso se considerarmos que as inserções são sempre realizadas a partir de valores aleatórios não ordenados. Caso contrário, se valores ordenados forem utilizados tem-se a possibilidade da altura ser linear em relação ao tamanho da entrada. Nesse último caso, a estrutura passará a apresentar ligações muito semelhantes a uma lista simplesmente encadeada e seus custos passam a acompanhar os já apresentados nesta estrutura. 
+Por fim, ainda utilizando da representação da Fig. 1, podemos observar que é possível identificar a altura da estrutura. Em literatura, uma árvore binária <b>balanceada</b> apresenta como altura o fator de <b>log</b>n, com n representando o número de elementos inseridos. Esse <b>balanceamento</b> é obtido mantendo-se todas as <b>folhas</b> em níveis muito próximos, sendo aceitável uma variação de no máximo 1 de altura para variações. Consideramos esse contexto como caso médio, isso se considerarmos que as inserções são sempre realizadas a partir de valores aleatórios não ordenados. Caso contrário, se valores ordenados forem utilizados tem-se a possibilidade da altura ser linear em relação ao tamanho da entrada. Nesse último caso, a estrutura passará a apresentar ligações muito semelhantes a uma lista simplesmente encadeada e seus custos passam a acompanhar os já apresentados nesta estrutura. 
 </p>
 
 # Compilação e Execução

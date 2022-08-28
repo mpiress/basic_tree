@@ -1,4 +1,4 @@
-# Árvore Binária Básica
+# Árvore Binária
 
 <div style="display: inline-block;">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"/> 

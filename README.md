@@ -14,7 +14,7 @@
 <p> </p>
 
 <p align="justify">
-	Em uma árvore binária, cada elemento é denominado nó da árvore e sua posição na estrutura pode levar a uma de três nomenclaturas. Se o nó é o primeiro inserido, denominamos tal elemento como </i>raiz</i> da árvore. Partindo da *raiz*, temos por designação dois filhos, *filho esquerdo* e *filho direto*. Um filho é posicionado a esquerda, se somente se, seu valor de teste é menor que o valor do nó onde este será conectado. Este nó de conexão é conhecido como *nó pai*. Por conseguinte, os filhos tidos como direitos seguem a mesma regra, contudo, para valores maiores.
+	Em uma árvore binária, cada elemento é denominado nó da árvore e sua posição na estrutura pode levar a uma de três nomenclaturas. Se o nó é o primeiro inserido, denominamos tal elemento como <b>raiz</b> da árvore. Partindo da *raiz*, temos por designação dois filhos, *filho esquerdo* e *filho direto*. Um filho é posicionado a esquerda, se somente se, seu valor de teste é menor que o valor do nó onde este será conectado. Este nó de conexão é conhecido como *nó pai*. Por conseguinte, os filhos tidos como direitos seguem a mesma regra, contudo, para valores maiores.
 </p>
 
 <p align="justify">

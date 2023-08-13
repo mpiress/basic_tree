@@ -21,6 +21,9 @@ struct Tree{
 Tree* CreateTree();
 bool TVazia(Tree **t);
 void insertTree(Tree **t, Record r);
+void insertTree_alt(Tree **t, Record r);
+
+
 void pesquisa(Tree **t, Tree **aux, Record r);
 Tree* pesquisa_alt(Tree **t, int key);
 Tree* pesquisa_alt_nr(Tree *t, int key);

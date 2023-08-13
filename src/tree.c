@@ -11,6 +11,7 @@ bool TVazia(Tree **t){
   return *t == NULL;
 }
 
+
 void insertTree(Tree **t, Record r){
 
   if(TVazia(t)){
@@ -32,6 +33,38 @@ void insertTree(Tree **t, Record r){
   }
 
 }
+
+
+void insertTree_alt(Tree **t, Record r){
+  Tree *aux = *t;
+  
+  while(aux != NULL){
+    if(r.key < aux->reg.key){
+
+      if (aux->esq == NULL){
+        aux->esq = (Tree*) malloc (sizeof(Tree));
+        aux = aux->esq;
+        aux->reg = r;
+        aux->esq = NULL;
+        aux->dir = NULL;
+      }
+      aux = aux->esq;
+
+    }else{
+      if (aux->dir == NULL){
+        aux->dir = (Tree*) malloc (sizeof(Tree));
+        aux = aux->dir;
+        aux->reg = r;
+        aux->esq = NULL;
+        aux->dir = NULL;
+      }
+      aux = aux->dir;
+    }
+
+  }
+
+}
+
 
 
 void pesquisa(Tree **t, Tree **aux, Record r){
@@ -56,8 +89,7 @@ Tree* pesquisa_alt(Tree **t, int key){
   if((*t)->reg.key > key)
       return pesquisa_alt(&(*t)->esq, key);
       
-  else
-    return pesquisa_alt(&(*t)->dir, key);
+  return pesquisa_alt(&(*t)->dir, key);
 
 }
 

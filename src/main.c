@@ -2,7 +2,7 @@
 #include "fila.h"
 
 int main(){
-	int reg[] = {5,3,7,2,4,6,1};
+	int reg[] = {33, 47, 28, 19, 25, 60, 8, 39};
 	Tree *raiz = CreateTree();
 	Tree *aux = CreateTree();
 	Record r;
@@ -11,7 +11,7 @@ int main(){
 
 	printf("ELEMENTOS DA ARVORE: { ");
   
-	for(int i=0; i< 7; i++){
+	for(int i=0; i< 8; i++){
 		r.key = reg[i];
 		r.value = 1;
 		insertTree(&raiz, r);

@@ -1,6 +1,8 @@
 #include "tree.h"
 #include"fila.h"
 
+
+
 Tree* CreateTree(){
 	return NULL;
 }
@@ -31,6 +33,7 @@ void insertTree(Tree **t, Record r){
 
 }
 
+
 void pesquisa(Tree **t, Tree **aux, Record r){
 
   if(*t == NULL){
@@ -43,6 +46,35 @@ void pesquisa(Tree **t, Tree **aux, Record r){
 
   *aux = *t;
 }
+
+
+Tree* pesquisa_alt(Tree **t, int key){
+
+  if((*t)->reg.key == key || *t == NULL)
+    return *t;
+  
+  if((*t)->reg.key > key)
+      return pesquisa_alt(&(*t)->esq, key);
+      
+  else
+    return pesquisa_alt(&(*t)->dir, key);
+
+}
+
+
+Tree* pesquisa_alt_nr(Tree *t, int key){
+
+  Tree *aux = t;
+  while(aux->reg.key != key && aux != NULL){
+    if(aux->reg.key > key)
+      aux = aux->esq;   
+    else
+      aux = aux->dir;
+  }
+
+  return aux;
+}
+
 
 
 int isInTree(Tree *t, Record r) {
@@ -72,26 +104,27 @@ void antecessor(Tree **t, Tree *aux){
 void removeTree(Tree **t, Record r){
 	Tree *aux;
   	
-  	if (*t == NULL){ 
-  		printf("[ERROR]: Record not found!!!\n");
-    	return;
-  	}
+	if (*t == NULL){ 
+		printf("[ERROR]: Record not found!!!\n");
+  	return;
+	}
 
-  	if (r.key < (*t)->reg.key){ removeTree(&(*t)->esq, r); return; }
-  	if (r.key > (*t)->reg.key){ removeTree(&(*t)->dir, r); return; }
+	if (r.key < (*t)->reg.key){ removeTree(&(*t)->esq, r); return; }
+	if (r.key > (*t)->reg.key){ removeTree(&(*t)->dir, r); return; }
 
-  	if ((*t)->dir == NULL){ 
-  		aux = *t;  
-  		*t = (*t)->esq;
-    	free(aux);
-    	return;
-  	}
-
-  	if ((*t)->esq != NULL){ antecessor(&(*t)->esq, *t); return; }
-
-  	aux = *t;  
-  	*t = (*t)->dir;
+	if ((*t)->dir == NULL){ 
+		aux = *t;  
+		*t = (*t)->esq;
   	free(aux);
+  	return;
+	}
+
+	if ((*t)->esq != NULL){ antecessor(&(*t)->esq, *t); return; }
+
+	aux = *t;  
+	*t = (*t)->dir;
+	free(aux);
+
 }
 
 
@@ -122,6 +155,7 @@ void posordem(Tree *t)
     printf("%d ", t->reg.key);
   }
 }
+
 
 void widthPath(Tree *t){
   Fila q;
